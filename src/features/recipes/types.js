@@ -34,6 +34,8 @@ export const createRecipe = ({
   difficulty,
   ingredients,
   steps,
+  totalTimeMinutes,
+  complexityScore,
 }) => ({
   id: Date.now().toString(),
   title,
@@ -41,7 +43,9 @@ export const createRecipe = ({
   difficulty, // 'Easy' | 'Medium' | 'Hard'
   ingredients, // Array of Ingredient
   steps, // Array of RecipeStep
+  totalTimeMinutes,
   isFavorite: false,
+  complexityScore,
   createdAt: new Date().toISOString(),
   updatedAt: new Date().toISOString(),
 });
